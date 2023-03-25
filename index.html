@@ -1,520 +1,789 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=en>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 
-    <title>Assignment 3</title>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name=keywords content="Bootstrap, Parallax, Template, Registration, Landing">
+    <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name=author content=Grayrids>
+    <title>ALI-  Website Template</title>
+
+    <link rel=stylesheet href="css/A.bootstrap.min.css+font-awesome.min.css+line-icons.css+owl.carousel.css+owl.theme.css+nivo-lightbox.css+magnific-popup.css+slicknav.css+animate.css,Mcc.qIC0l62iZy.css.pagespeed.cf.nv8SIz8tsA.css">
+    <link rel=stylesheet href="css/A.main.css+responsive.css,Mcc.qPptBwSIFl.css.pagespeed.cf.yRI0sRIaep.css">
+    <script data-pagespeed-no-defer>
+        (function() {
+            function f(a, b, d) {
+                if (a.addEventListener) a.addEventListener(b, d, !1);
+                else if (a.attachEvent) a.attachEvent("on" + b, d);
+                else {
+                    var c = a["on" + b];
+                    a["on" + b] = function() {
+                        d.call(this);
+                        c && c.call(this)
+                    }
+                }
+            };
+            window.pagespeed = window.pagespeed || {};
+            var g = window.pagespeed;
+
+            function k(a) {
+                this.g = [];
+                this.f = 0;
+                this.h = !1;
+                this.j = a;
+                this.i = null;
+                this.l = 0;
+                this.b = !1;
+                this.a = 0
+            }
+
+            function l(a, b) {
+                var d = b.getAttribute("data-pagespeed-lazy-position");
+                if (d) return parseInt(d, 0);
+                var d = b.offsetTop,
+                    c = b.offsetParent;
+                c && (d += l(a, c));
+                d = Math.max(d, 0);
+                b.setAttribute("data-pagespeed-lazy-position", d);
+                return d
+            }
+
+            function m(a, b) {
+                var d, c, e;
+                if (!a.b && (0 == b.offsetHeight || 0 == b.offsetWidth)) return !1;
+                a: if (b.currentStyle) c = b.currentStyle.position;
+                    else {
+                        if (document.defaultView && document.defaultView.getComputedStyle && (c = document.defaultView.getComputedStyle(b, null))) {
+                            c = c.getPropertyValue("position");
+                            break a
+                        }
+                        c = b.style && b.style.position ? b.style.position : ""
+                    }
+                if ("relative" == c) return !0;
+                e = 0;
+                "number" == typeof window.pageYOffset ? e = window.pageYOffset : document.body && document.body.scrollTop ? e = document.body.scrollTop : document.documentElement &&
+                    document.documentElement.scrollTop && (e = document.documentElement.scrollTop);
+                d = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+                c = e;
+                e += d;
+                var h = b.getBoundingClientRect();
+                h ? (e = h.top - d, c = h.bottom) : (h = l(a, b), d = h + b.offsetHeight, e = h - e, c = d - c);
+                return e <= a.f && 0 <= c + a.f
+            }
+            k.prototype.m = function(a) {
+                p(a);
+                var b = this;
+                window.setTimeout(function() {
+                    var d = a.getAttribute("data-pagespeed-lazy-src");
+                    if (d)
+                        if ((b.h || m(b, a)) && -1 != a.src.indexOf(b.j)) {
+                            var c = a.parentNode,
+                                e = a.nextSibling;
+                            c && c.removeChild(a);
+                            a.c && (a.getAttribute = a.c);
+                            a.removeAttribute("onload");
+                            a.tagName && "IMG" == a.tagName && g.CriticalImages && f(a, "load", function() {
+                                g.CriticalImages.checkImageForCriticality(this);
+                                b.b && (b.a--, b.a || g.CriticalImages.checkCriticalImages())
+                            });
+                            a.removeAttribute("data-pagespeed-lazy-src");
+                            a.removeAttribute("data-pagespeed-lazy-replaced-functions");
+                            c && c.insertBefore(a, e);
+                            if (c = a.getAttribute("data-pagespeed-lazy-srcset")) a.srcset = c, a.removeAttribute("data-pagespeed-lazy-srcset");
+                            a.src = d
+                        } else b.g.push(a)
+                }, 0)
+            };
+            k.prototype.loadIfVisibleAndMaybeBeacon = k.prototype.m;
+            k.prototype.s = function() {
+                this.h = !0;
+                q(this)
+            };
+            k.prototype.loadAllImages = k.prototype.s;
+
+            function q(a) {
+                var b = a.g,
+                    d = b.length;
+                a.g = [];
+                for (var c = 0; c < d; ++c) a.m(b[c])
+            }
+
+            function t(a, b) {
+                return a.a ? null != a.a(b) : null != a.getAttribute(b)
+            }
+            k.prototype.u = function() {
+                for (var a = document.getElementsByTagName("img"), b = 0, d; d = a[b]; b++) t(d, "data-pagespeed-lazy-src") && p(d)
+            };
+            k.prototype.overrideAttributeFunctions = k.prototype.u;
+
+            function p(a) {
+                t(a, "data-pagespeed-lazy-replaced-functions") || (a.c = a.getAttribute, a.getAttribute = function(a) {
+                    "src" == a.toLowerCase() && t(this, "data-pagespeed-lazy-src") && (a = "data-pagespeed-lazy-src");
+                    return this.c(a)
+                }, a.setAttribute("data-pagespeed-lazy-replaced-functions", "1"))
+            }
+            g.o = function(a, b) {
+                function d() {
+                    if (!(c.b && a || c.i)) {
+                        var b = 200;
+                        200 < (new Date).getTime() - c.l && (b = 0);
+                        c.i = window.setTimeout(function() {
+                            c.l = (new Date).getTime();
+                            q(c);
+                            c.i = null
+                        }, b)
+                    }
+                }
+                var c = new k(b);
+                g.lazyLoadImages = c;
+                f(window, "load", function() {
+                    c.b = !0;
+                    c.h = a;
+                    c.f = 200;
+                    if (g.CriticalImages) {
+                        for (var b = 0, d = document.getElementsByTagName("img"), r = 0, n; n = d[r]; r++) - 1 != n.src.indexOf(c.j) && t(n, "data-pagespeed-lazy-src") && b++;
+                        c.a = b;
+                        c.a || g.CriticalImages.checkCriticalImages()
+                    }
+                    q(c)
+                });
+                b.indexOf("data") && ((new Image).src = b);
+                f(window,
+                    "scroll", d);
+                f(window, "resize", d)
+            };
+            g.lazyLoadInit = g.o;
+        })();
+
+        pagespeed.lazyLoadInit(true, "/pagespeed_static/1.JiBnMqyl6S.gif");
+    </script>
 </head>
-
-<body>
-
-
 
 <body><noscript><meta HTTP-EQUIV="refresh" content="0;url='https://preview.uideck.com/items/mate/?PageSpeed=noscript'" /><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a href="https://preview.uideck.com/items/mate/?PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript>
 
-<header id=hero-area data-stellar-background-ratio=0.5>
+    <header id=hero-area data-stellar-background-ratio=0.5>
 
-    <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
-        <div class=container>
+        <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
+            <div class=container>
 
-            <div class=navbar-header>
-                <a href=index.html class=navbar-brand><img class=img-fulid src="data:image/webp;base64,UklGRloBAABXRUJQVlA4TE0BAAAvx8AOEH8gEEjyx1tqhQkb2olI6DiAXNvWs+SRM/xzYglUYCSOsAPpAB06wg6kA+hAO0gN/CWYCsg5ncH3vd/0pq4V0f8JkP8frxIRLiu+VtEclrTWp7I7clbQC3KNt/B3TmPKMcrZ3B5qvuBdeyRmz6FvgfZOxh5ynhetDSWD9pwttBmMRCTodDov0Ol0Ek5G/jJAWkQeI5zDXPxPIK4JE5ENIjwCcYOuEnIZ5QPIGMRS+zPCCkDJotMTIsycTXOu8F4pN87+NwDTvzR98ewoT/AMcXMWTritfBDeQtac4B2obfk2YHoEZXPkGMKYsoDmGCb2BO/URLmFfACHX8vIX3bkOIxpT5CWV4jbE1RF++AqJo+Qs8f1jVEblh1oE8tutfBLw06nk7TiWSPxFbdixWeEnF1jmIuInEHTriPYdGYwteseys4KnFry7yMA" alt="" id=pagespeed_img_Z1hdOJo4_J1></a>
-                <button class=navbar-toggler type=button data-toggle=collapse data-target="#main-navbar" aria-controls=main-navbar aria-expanded=false aria-label="Toggle navigation">
+                <div class=navbar-header>
+                    <a href=index.html class=navbar-brand><img class=img-fulid src="data:image/webp;base64,UklGRloBAABXRUJQVlA4TE0BAAAvx8AOEH8gEEjyx1tqhQkb2olI6DiAXNvWs+SRM/xzYglUYCSOsAPpAB06wg6kA+hAO0gN/CWYCsg5ncH3vd/0pq4V0f8JkP8frxIRLiu+VtEclrTWp7I7clbQC3KNt/B3TmPKMcrZ3B5qvuBdeyRmz6FvgfZOxh5ynhetDSWD9pwttBmMRCTodDov0Ol0Ek5G/jJAWkQeI5zDXPxPIK4JE5ENIjwCcYOuEnIZ5QPIGMRS+zPCCkDJotMTIsycTXOu8F4pN87+NwDTvzR98ewoT/AMcXMWTritfBDeQtac4B2obfk2YHoEZXPkGMKYsoDmGCb2BO/URLmFfACHX8vIX3bkOIxpT5CWV4jbE1RF++AqJo+Qs8f1jVEblh1oE8tutfBLw06nk7TiWSPxFbdixWeEnF1jmIuInEHTriPYdGYwteseys4KnFry7yMA" alt="" id=pagespeed_img_Z1hdOJo4_J1></a>
+                    <button class=navbar-toggler type=button data-toggle=collapse data-target="#main-navbar" aria-controls=main-navbar aria-expanded=false aria-label="Toggle navigation">
 <i class="lnr lnr-menu"></i>
 </button>
+                </div>
+                <div class="collapse navbar-collapse" id=main-navbar>
+                    <ul class="navbar-nav mr-auto w-100 justify-content-end">
+                        <li class=nav-item>
+                            <a class="nav-link page-scroll" href="#hero-area">Home</a>
+                        </li>
+                        <li class=nav-item>
+                            <a class="nav-link page-scroll" href="#services">Services</a>
+                        </li>
+                        <li class=nav-item>
+                            <a class="nav-link page-scroll" href="#features">Features</a>
+                        </li>
+                        <li class=nav-item>
+                            <a class="nav-link page-scroll" href="#portfolios">Works</a>
+                        </li>
+                        <li class=nav-item>
+                            <a class="nav-link page-scroll" href="#pricing">Pricing</a>
+                        </li>
+                        <li class=nav-item>
+                            <a class="nav-link page-scroll" href="#team">Team</a>
+                        </li>
+                        <li class=nav-item>
+                            <a class="nav-link page-scroll" href="#blog">Blog</a>
+                        </li>
+                        <li class=nav-item>
+                            <a class="nav-link page-scroll" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse" id=main-navbar>
-                <ul class="navbar-nav mr-auto w-100 justify-content-end">
-                    <li class=nav-item>
-                        <a class="nav-link page-scroll" href="#hero-area">Home</a>
-                    </li>
-                    <li class=nav-item>
-                        <a class="nav-link page-scroll" href="#services">Services</a>
-                    </li>
-                    <li class=nav-item>
-                        <a class="nav-link page-scroll" href="#features">Features</a>
-                    </li>
-                    <li class=nav-item>
-                        <a class="nav-link page-scroll" href="#portfolios">Works</a>
-                    </li>
-                    <li class=nav-item>
-                        <a class="nav-link page-scroll" href="#pricing">Pricing</a>
-                    </li>
-                    <li class=nav-item>
-                        <a class="nav-link page-scroll" href="#team">Team</a>
-                    </li>
-                    <li class=nav-item>
-                        <a class="nav-link page-scroll" href="#blog">Blog</a>
-                    </li>
-                    <li class=nav-item>
-                        <a class="nav-link page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
+
+            <ul class=mobile-menu>
+                <li>
+                    <a class=page-scroll href="#hero-area">Home</a>
+                </li>
+                <li>
+                    <a class=page-scroll href="#services">Services</a>
+                </li>
+                <li>
+                    <a class=page-scroll href="#features">Features</a>
+                </li>
+                <li>
+                    <a class=page-scroll href="#portfolios">Works</a>
+                </li>
+                <li>
+                    <a class=page-scroll href="#pricing">Pricing</a>
+                </li>
+                <li>
+                    <a class=page-scroll href="#team">Team</a>
+                </li>
+                <li>
+                    <a class=page-scroll href="#blog">Blog</a>
+                </li>
+                <li>
+                    <a class=page-scroll href="#contact">Contact</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <div class=container>
+            <div class="row justify-content-md-center">
+                <div class=col-md-10>
+                    <div class="contents text-center">
+                        <h1 class="wow fadeInDown" data-wow-duration=1000ms data-wow-delay=0.3s>Mate - Free Parallax Website Template</h1>
+                        <p class="lead  wow fadeIn" data-wow-duration=1000ms data-wow-delay=400ms>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        <a href="https://uideck.com/products/mate-free-parallax-website-template/" class="btn btn-common wow fadeInUp" rel=nofollow data-wow-duration=1000ms data-wow-delay=400ms>Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section id=services class=section>
+        <div class=container>
+            <div class=section-header>
+                <h2 class="section-title wow fadeIn" data-wow-duration=1000ms data-wow-delay=0.3s>Our Services</h2>
+                <hr class="lines wow zoomIn" data-wow-delay=0.3s>
+                <p class="section-subtitle wow fadeIn" data-wow-duration=1000ms data-wow-delay=0.3s>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, dignissimos! <br> Lorem ipsum dolor sit amet, consectetur.</p>
+            </div>
+            <div class=row>
+                <div class="col-md-4 col-sm-6">
+                    <div class="item-boxes wow fadeInDown" data-wow-delay=0.2s>
+                        <div class=icon>
+                            <i class="lnr lnr-pencil"></i>
+                        </div>
+                        <h4>Content Writing</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="item-boxes wow fadeInDown" data-wow-delay=0.8s>
+                        <div class=icon>
+                            <i class="lnr lnr-code"></i>
+                        </div>
+                        <h4>Web Development</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="item-boxes wow fadeInDown" data-wow-delay=1.2s>
+                        <div class=icon>
+                            <i class="lnr lnr-mustache"></i>
+                        </div>
+                        <h4>Business Consultancy</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id=features class=section data-stellar-background-ratio=0.2>
+        <div class=container>
+            <div class=section-header>
+                <h2 class=section-title>Some Features</h2>
+                <hr class=lines>
+                <p class=section-subtitle>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, dignissimos! <br> Lorem ipsum dolor sit amet, consectetur.</p>
+            </div>
+            <div class=row>
+                <div class="col-lg-8 col-md-12 col-xs-12">
+                    <div class=container>
+                        <div class=row>
+                            <div class="col-lg-6 col-sm-6 col-xs-12 box-item">
+                                <span class=icon>
+<i class="lnr lnr-rocket"></i>
+</span>
+                                <div class=text>
+                                    <h4>Bootstrap 4 Based</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-xs-12 box-item">
+                                <span class=icon>
+<i class="lnr lnr-laptop-phone"></i>
+</span>
+                                <div class=text>
+                                    <h4>Fully Responsive</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-xs-12 box-item">
+                                <span class=icon>
+<i class="lnr lnr-layers"></i>
+</span>
+                                <div class=text>
+                                    <h4>Parallax Background</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-xs-12 box-item">
+                                <span class=icon>
+<i class="lnr lnr-cog"></i>
+</span>
+                                <div class=text>
+                                    <h4>Easy to Customize</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xs-12">
+                    <div class=show-box>
+                        <img class=img-fulid data-pagespeed-lazy-src="img/features/xfeature.png.pagespeed.ic.bSWdsG_W4i.webp" alt="" src="/pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id=portfolios class=section>
+
+        <div class=container>
+            <div class=section-header>
+                <h2 class=section-title>Our Portfolio</h2>
+                <hr class=lines>
+                <p class=section-subtitle>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, dignissimos! <br> Lorem ipsum dolor sit amet, consectetur.</p>
+            </div>
+            <div class=row>
+                <div class=col-md-12>
+
+                    <div class="controls text-center">
+                        <a class="filter active btn btn-common" data-filter=all>
+All
+</a>
+                        <a class="filter btn btn-common" data-filter=.design>
+Design
+</a>
+                        <a class="filter btn btn-common" data-filter=.development>
+Development
+</a>
+                        <a class="filter btn btn-common" data-filter=.print>
+Print
+</a>
+                    </div>
+
+                </div>
+
+                <div id=portfolio class=row>
+                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development print">
+                        <div class=portfolio-item>
+                            <div class=shot-item>
+                                <img data-pagespeed-lazy-src="img/portfolio/ximg1.jpg.pagespeed.ic.rqBAwPFugP.webp" alt="" src="/pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                                />
+                                <a class="overlay lightbox" href="img/portfolio/img1.jpg">
+<i class="lnr lnr-eye item-icon"></i>
+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix design print">
+                        <div class=portfolio-item>
+                            <div class=shot-item>
+                                <img data-pagespeed-lazy-src="img/portfolio/ximg2.jpg.pagespeed.ic.Y2oqLK2-LY.webp" alt="" src="/pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                                />
+                                <a class="overlay lightbox" href="img/portfolio/img2.jpg">
+<i class="lnr lnr-eye item-icon"></i>
+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development">
+                        <div class=portfolio-item>
+                            <div class=shot-item>
+                                <img data-pagespeed-lazy-src="img/portfolio/ximg3.jpg.pagespeed.ic.Sexy_JsBB-.webp" alt="" src="/pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                                />
+                                <a class="overlay lightbox" href="img/portfolio/img3.jpg">
+<i class="lnr lnr-eye item-icon"></i>
+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development design">
+                        <div class=portfolio-item>
+                            <div class=shot-item>
+                                <img data-pagespeed-lazy-src="img/portfolio/ximg4.jpg.pagespeed.ic.y2bSkScsiO.webp" alt="" src="/pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                                />
+                                <a class="overlay lightbox" href="img/portfolio/img4.jpg">
+<i class="lnr lnr-eye item-icon"></i>
+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development">
+                        <div class=portfolio-item>
+                            <div class=shot-item>
+                                <img data-pagespeed-lazy-src="img/portfolio/ximg5.jpg.pagespeed.ic.RuJUpCJkP8.webp" alt="" src="/pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                                />
+                                <a class="overlay lightbox" href="img/portfolio/img5.jpg">
+<i class="lnr lnr-eye item-icon"></i>
+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix print design">
+                        <div class=portfolio-item>
+                            <div class=shot-item>
+                                <img data-pagespeed-lazy-src="img/portfolio/ximg6.jpg.pagespeed.ic.Bj6jZ0HeQb.webp" alt="" src="/pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                                />
+                                <a class="overlay lightbox" href="img/portfolio/img6.jpg">
+<i class="lnr lnr-eye item-icon"></i>
+</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <ul class=mobile-menu>
-            <li>
-                <a class=page-scroll href="#hero-area">Home</a>
-            </li>
-            <li>
-                <a class=page-scroll href="#services">Services</a>
-            </li>
-            <li>
-                <a class=page-scroll href="#features">Features</a>
-            </li>
-            <li>
-                <a class=page-scroll href="#portfolios">Works</a>
-            </li>
-            <li>
-                <a class=page-scroll href="#pricing">Pricing</a>
-            </li>
-            <li>
-                <a class=page-scroll href="#team">Team</a>
-            </li>
-            <li>
-                <a class=page-scroll href="#blog">Blog</a>
-            </li>
-            <li>
-                <a class=page-scroll href="#contact">Contact</a>
-            </li>
-        </ul>
-
-    </nav>
+    </section>
 
 
-        <div class="row justify-content-md-center">
-            <div class=col-md-10>
-                <div class="contents text-center">
-                    <h1 class="wow fadeInDown" data-wow-duration=1000ms data-wow-delay=0.3s>Mate - Free Parallax Website Template</h1>
-                    <p class="lead  wow fadeIn" data-wow-duration=1000ms data-wow-delay=400ms>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                    <a href="https://uideck.com/products/mate-free-parallax-website-template/" class="btn btn-common wow fadeInUp" rel=nofollow data-wow-duration=1000ms data-wow-delay=400ms>Download</a>
+    <section class="video-promo section">
+        <div class=container>
+            <div class="row justify-content-center">
+                <div class=col-lg-8>
+                    <div class="video-promo-content text-center">
+                        <h2 class="wow zoomIn" data-wow-duration=1000ms data-wow-delay=100ms>Watch Our Intro video</h2>
+                        <p class="wow zoomIn" data-wow-duration=1000ms data-wow-delay=100ms>Aliquam vestibulum cursus felis. In iaculis iaculis sapien ac condimentum. Vestibulum congue posuere lacus, id tincidunt nisi porta sit amet. Suspendisse et sapien varius, pellentesque dui non, semper orci.</p>
+                        <a href="https://www.youtube.com/watch?v=IXoMDwh4Cq8" class="video-popup wow fadeInUp" data-wow-duration=1000ms data-wow-delay=0.3s><i class="lnr lnr-film-play"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id=pricing class="section pricing-section">
+        <div class=container>
+            <div class=section-header>
+                <h2 class=section-title>Pricing Table</h2>
+                <hr class=lines>
+                <p class=section-subtitle>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, dignissimos! <br> Lorem ipsum dolor sit amet, consectetur.</p>
+            </div>
+            <div class="row pricing-tables">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class=pricing-table>
+                        <div class=pricing-details>
+                            <h2>Free</h2>
+                            <span>$00</span>
+                            <ul>
+                                <li>Consectetur adipiscing</li>
+                                <li>Nunc luctus nulla et tellus</li>
+                                <li>Suspendisse quis metus</li>
+                                <li>Vestibul varius fermentum erat</li>
+                            </ul>
+                        </div>
+                        <div class=plan-button>
+                            <a href="#" class="btn btn-common">Get Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class=pricing-table>
+                        <div class=pricing-details>
+                            <h2>Popular</h2>
+                            <span>$3.99</span>
+                            <ul>
+                                <li>Consectetur adipiscing</li>
+                                <li>Nunc luctus nulla et tellus</li>
+                                <li>Suspendisse quis metus</li>
+                                <li>Vestibul varius fermentum erat</li>
+                            </ul>
+                        </div>
+                        <div class=plan-button>
+                            <a href="#" class="btn btn-common">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class=pricing-table>
+                        <div class=pricing-details>
+                            <h2>Premium</h2>
+                            <span>$9.50</span>
+                            <ul>
+                                <li>Consectetur adipiscing</li>
+                                <li>Nunc luctus nulla et tellus</li>
+                                <li>Suspendisse quis metus</li>
+                                <li>Vestibul varius fermentum erat</li>
+                            </ul>
+                        </div>
+                        <div class=plan-button>
+                            <a href="#" class="btn btn-common">Buy Now</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</header>
 
 
-<section id=services class=section>
-    <div class=container>
-
-
-
-
-
-
-
-    
-    <section class="section1-service">
-        <div class="row">
-            <div class="container">
-                <div class="section-p">
-                    <h1 class="p-service"><strong class="str-service"> Our Services</strong></h1>
-                    <hr class="hr-green">
-                    <p class="p-service">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, dignissimos! </p>
-                    <p class="p-service"> Lorem ipsum dolor sit amet, consectetur.</p>
+    <div class="counters section" data-stellar-background-ratio=0.5>
+        <div class=container>
+            <div class=row>
+                <div class="col-sm-6 col-md-3 col-lg-3">
+                    <div class=facts-item>
+                        <div class=icon>
+                            <i class="lnr lnr-clock"></i>
+                        </div>
+                        <div class=fact-count>
+                            <h3><span class=counter>1589</span></h3>
+                            <h4>Working Hours</h4>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="content-section">
-                    <div class="content">
-                        <div class="i-tags">
-                            <div class="i-content">
-                                <div class="i-div">
-                                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                                </div>
-                                <div class="content-div">
-                                    <h2 class="content-h2">
-                                        Content Writing
-                                    </h2>
-                                    <p class="content-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
-
-                                </div>
-                            </div>
+                <div class="col-sm-6 col-md-3 col-lg-3">
+                    <div class=facts-item>
+                        <div class=icon>
+                            <i class="lnr lnr-briefcase"></i>
                         </div>
-
-                        <div class="i-tags">
-                            <div class="i-content">
-                                <div class="i-div">
-                                    <i class="fa fa-code" aria-hidden="true"></i>
-                                </div>
-                                <div class="content-div">
-                                    <h2 class="content-h2">
-                                        Web Development
-                                    </h2>
-                                    <p class="content-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
-
-                                </div>
-                            </div>
+                        <div class=fact-count>
+                            <h3><span class=counter>699</span></h3>
+                            <h4>Completed Projects</h4>
                         </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3">
+                    <div class=facts-item>
+                        <div class=icon>
+                            <i class="lnr lnr-user"></i>
+                        </div>
+                        <div class=fact-count>
+                            <h3><span class=counter>203</span></h3>
+                            <h4>No. of Clients</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3">
+                    <div class=facts-item>
+                        <div class=icon>
+                            <i class="lnr lnr-heart"></i>
+                        </div>
+                        <div class=fact-count>
+                            <h3><span class=counter>1689</span></h3>
+                            <h4>Peoples Love</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                        <div class="i-tags">
-                            <div class="i-content">
-                                <div class="i-div">
-                                    <i class="fa fa-smile-o" aria-hidden="true"></i>
-                                </div>
-                                <div class="content-div">
-                                    <h2 class="content-h2">
-                                        Business Consultancy
-                                    </h2>
-                                    <p class="content-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
 
-                                </div>
+    <section id=team class=section>
+        <div class=container>
+            <div class=section-header>
+                <h2 class=section-title>Our Team</h2>
+                <hr class=lines>
+                <p class=section-subtitle>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, dignissimos! <br> Lorem ipsum dolor sit amet, consectetur.</p>
+            </div>
+            <div class=row>
+                <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class=single-team>
+                        <img data-pagespeed-lazy-src="img/team/xteam1.jpg.pagespeed.ic.-cMzflxBiD.webp" alt="" src="/pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+                        <div class=team-details>
+                            <div class=team-inner>
+                                <h4 class=team-title>Jhon Doe</h4>
+                                <p>Chief Technical Officer</p>
+                                <ul class=social-list>
+                                    <li class=facebook><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li class=twitter><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li class=google-plus><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li class=linkedin><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class=single-team>
+                        <img data-pagespeed-lazy-src="img/team/xteam2.jpg.pagespeed.ic.yLwkEJd6xI.webp" alt="" src="/pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+                        <div class=team-details>
+                            <div class=team-inner>
+                                <h4 class=team-title>Paul Kowalsy</h4>
+                                <p>CEO & Co-Founder</p>
+                                <ul class=social-list>
+                                    <li class=facebook><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li class=twitter><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li class=google-plus><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li class=linkedin><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class=single-team>
+                        <img data-pagespeed-lazy-src="img/team/xteam3.jpg.pagespeed.ic.FPk7vvJsE0.webp" alt="" src="/pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+                        <div class=team-details>
+                            <div class=team-inner>
+                                <h4 class=team-title>Emilly Williams</h4>
+                                <p>Business Manager</p>
+                                <ul class=social-list>
+                                    <li class=facebook><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li class=twitter><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li class=google-plus><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li class=linkedin><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class=single-team>
+                        <img class=img-fulid data-pagespeed-lazy-src="img/team/xteam4.jpg.pagespeed.ic.98065Mp7BP.webp" alt="" src="/pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+                        <div class=team-details>
+                            <div class=team-inner>
+                                <h4 class=team-title>Patricia Green</h4>
+                                <p>Graphic Designer</p>
+                                <ul class=social-list>
+                                    <li class=facebook><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li class=twitter><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li class=google-plus><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li class=linkedin><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
 
-
-
-    <section class="section1-feature">
-        <div class="row">
-            <div class="container">
-                <div class="section-p-f">
-                    <h1 class="p-service"><strong class="str-service"> SOME FEATURES </strong></h1>
-                    <hr class="hr-green">
-                    <p class="p-service">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, dignissimos! </p>
-                    <p class="p-service"> Lorem ipsum dolor sit amet, consectetur.</p>
-                </div>
-
-                <div class="content-section">
-                    <div class="content2">
-                        <div class="i-tags">
-                            <div class="i-content2">
-                                <span class="i-div-2">
-                                    <i class="fa fa-rocket rckt" aria-hidden="true"></i>
-                                </span>
-                                <div class="content-div2">
-                                    <h2 class="content-h2">
-                                        BOOTSTRAP 4 BASED
-                                    </h2>
-                                    <p class="content-p_f">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-                                </div>
+    <div id=testimonial class=section data-stellar-background-ratio=0.1>
+        <div class=container>
+            <div class="row justify-content-md-center">
+                <div class=col-md-12>
+                    <div class="touch-slider owl-carousel owl-theme">
+                        <div class=testimonial-item>
+                            <img src="img/testimonial/xcustomer1.jpg.pagespeed.ic.mtS8AIJZeB.webp" alt="Client Testimonoal" />
+                            <div class=testimonial-text>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. send do <br> adipisicing ciusmod tempor incididunt ut labore et</p>
+                                <h3>Jone Deam</h3>
+                                <span>Fondor of Jalmori</span>
                             </div>
-
-                            <div class="i-content2">
-                                <span class="i-div-2">
-                                    <i class="fa fa-stack-exchange rckt" aria-hidden="true"></i>
-                                </span>
-                                <div class="content-div2">
-                                    <h2 class="content-h2">
-                                        PARALLAX BACKGROUND
-                                    </h2>
-                                    <p class="content-p_f">LLorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-                                </div>
-                            </div>
-
                         </div>
-
-                        <div class="i-tags i-tag2">
-                            <div class="i-content2">
-                                <span class="i-div-2">
-                                    <i class="fa fa-laptop rckt" aria-hidden="true"></i>
-                                </span>
-                                <div class="content-div2">
-                                    <h2 class="content-h2">
-                                        FULLY RESPONSIVE
-                                    </h2>
-                                    <p class="content-p_f">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-                                </div>
+                        <div class=testimonial-item>
+                            <img src="img/testimonial/xcustomer2.jpg.pagespeed.ic.f0xDtde-82.webp" alt="Client Testimonoal" />
+                            <div class=testimonial-text>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. send do <br> adipisicing ciusmod tempor incididunt ut labore et</p>
+                                <h3>Oidila Matik</h3>
+                                <span>President Lexo Inc</span>
                             </div>
-
-                            <div class="i-content2">
-                                <span class="i-div-2">
-                                <i class="fa fa-cog rckt" aria-hidden="true"></i>
-                                </span>
-                                <div class="content-div2">
-                                    <h2 class="content-h2">
-                                        EASY TO CUSTOMIZE </h2>
-                                    <p class="content-p_f">LLorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-                                </div>
-                            </div>
-
                         </div>
-
-                        <div class="i-tags">
-                            <div class="i-content2">
-                                <div class="i-content2a">
-                                    <img src="man.png" class="img-feature-man">
-                                </div>
+                        <div class=testimonial-item>
+                            <img src="img/testimonial/xcustomer3.jpg.pagespeed.ic.KpNKOWmC-o.webp" alt="Client Testimonoal" />
+                            <div class=testimonial-text>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. send do <br> adipisicing ciusmod tempor incididunt ut labore et</p>
+                                <h3>Alex Dattilo</h3>
+                                <span>CEO Optima Inc</span>
+                            </div>
+                        </div>
+                        <div class=testimonial-item>
+                            <img src="img/testimonial/xcustomer4.jpg.pagespeed.ic.X4NULcjo1P.webp" alt="Client Testimonoal" />
+                            <div class=testimonial-text>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. send do <br> adipisicing ciusmod tempor incididunt ut labore et</p>
+                                <h3>Paul Kowalsy</h3>
+                                <span>CEO & Founder</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-        </div>
-    </section>
+    </div>
 
 
-    <section class="section-youtube-banner">
-        <div class="yt-flex">
-            <h class="h1_yt">
-                WATCH OUR INTRO VIDEO
-            </h>
-            <p class="p_yt">
-                Aliquam vestibulum cursus felis. In iaculis iaculis sapien ac condimentum. Vestibulum congue posuere lacus, id tincidunt nisi porta sit amet. Suspendisse et sapien varius, pellentesque dui non, semper orci.
-            </p>
-            <div class="i-div">
-                <i class="fa fa-film" aria-hidden="true"></i>
+    <section id=blog class=section>
+
+        <div class=container>
+            <div class=section-header>
+                <h2 class=section-title>Recent Blog</h2>
+                <hr class=lines>
+                <p class=section-subtitle>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, dignissimos! <br> Lorem ipsum dolor sit amet, consectetur.</p>
             </div>
-        </div>
-    </section>
+            <div class=row>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 blog-item">
 
+                    <div class=blog-item-wrapper>
+                        <div class=blog-item-img>
+                            <a href=single-post.html>
+<img data-pagespeed-lazy-src="img/blog/ximg1.jpg.pagespeed.ic.dM70u0pwcN.webp" alt="" src="/pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+</a>
+                        </div>
+                        <div class=blog-item-text>
+                            <div class=meta-tags>
+                                <span class=date><i class="lnr  lnr-clock"></i>2 Days Ago</span>
+                                <span class=comments><a href="#"><i class="lnr lnr-bubble"></i> 24 Comments</a></span>
+                            </div>
+                            <h3>
+                                <a href=single-post.html>How often should you tweet?</a>
+                            </h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+                            </p>
+                            <a href=single-post.html class=btn-rm>Read More <i class="lnr lnr-arrow-right"></i></a>
+                        </div>
+                    </div>
 
-    <section class="section1-service">
-        <div class="row">
-            <div class="container">
-                <div class="section-p">
-                    <h1 class="p-service"><strong class="str-service">PRICING TABLE </strong></h1>
-                    <hr class="hr-green">
-                    <p class="p-service">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, dignissimos! </p>
-                    <p class="p-service"> Lorem ipsum dolor sit amet, consectetur.</p>
                 </div>
-                <div class="all-box">
-                    <div class="box-1">
-                        <div class="box1_flex">
-                            <div class="box-heading">
-                                <h1 class="h1_text"> FREE </h1>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 blog-item">
+
+                    <div class=blog-item-wrapper>
+                        <div class=blog-item-img>
+                            <a href=single-post.html>
+<img data-pagespeed-lazy-src="img/blog/ximg2.jpg.pagespeed.ic.3TS1lVqWUR.webp" alt="" src="/pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+</a>
+                        </div>
+                        <div class=blog-item-text>
+                            <div class=meta-tags>
+                                <span class=date><i class="lnr  lnr-clock"></i>2 Days Ago</span>
+                                <span class=comments><a href="#"><i class="lnr lnr-bubble"></i> 24 Comments</a></span>
                             </div>
-                            <div class="price-heading">
-                                <h1 class="h1_price"> $00 </h1>
-                            </div>
-                            <div class="box-p">
-                                <p class="p_box">Consectetur adipiscing</p>
-                                <p class="p_box">Nunc luctus nulla et tellus</p>
-                                <p class="p_box">Suspendisse quis metus</p>
-                                <p class="p_box">Vestibul varius fermentum erat</p>
-                            </div>
-                            <div class="box_button">
-                                <button class="button_green">
-                            GET PLAN
-                        </button>
-                            </div>
+                            <h3>
+                                <a href=single-post.html>Content is still king</a>
+                            </h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+                            </p>
+                            <a href=single-post.html class=btn-rm>Read More <i class="lnr lnr-arrow-right"></i></a>
                         </div>
                     </div>
 
-
-
-                    <div class="box-1">
-                        <div class="box1_flex">
-                            <div class="box-heading">
-                                <h1 class="h1_text"> POPULAR </h1>
-                            </div>
-                            <div class="price-heading">
-                                <h1 class="h1_price"> $3.99 </h1>
-                            </div>
-                            <div class="box-p">
-                                <p class="p_box">Consectetur adipiscing</p>
-                                <p class="p_box">Nunc luctus nulla et tellus</p>
-                                <p class="p_box">Suspendisse quis metus</p>
-                                <p class="p_box">Vestibul varius fermentum erat</p>
-                            </div>
-                            <div class="box_button">
-                                <button class="button_green">
-                            BUY NOW
-                        </button>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="box-1">
-                        <div class="box1_flex">
-                            <div class="box-heading">
-                                <h1 class="h1_text"> PREMIUM </h1>
-                            </div>
-                            <div class="price-heading">
-                                <h1 class="h1_price"> $9.50 </h1>
-                            </div>
-                            <div class="box-p">
-                                <p class="p_box">Consectetur adipiscing</p>
-                                <p class="p_box">Nunc luctus nulla et tellus</p>
-                                <p class="p_box">Suspendisse quis metus</p>
-                                <p class="p_box">Vestibul varius fermentum erat</p>
-                            </div>
-                            <div class="box_button">
-                                <button class="button_green">
-                            BUY NOW
-                        </button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 blog-item">
 
-            </div>
-        </div>
-    </section>
-
-
-    <section class="div_section3">
-        <div class="counter_border">
-            <div class="counter_icon">
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
-            </div>
-            <div class="number_count">
-                <h3 class="counter_h3">1589</h3>
-            </div>
-            <div class="work_count">
-                <p class="counter_p">Working Hours</p>
-            </div>
-        </div>
-
-
-        <div class="counter_border">
-            <div class="counter_icon">
-                <i class="fa fa-briefcase" aria-hidden="true"></i>
-            </div>
-            <div class="number_count">
-                <h3 class="counter_h3">699</h3>
-            </div>
-            <div class="work_count">
-                <p class="counter_p">Completed Projects</p>
-            </div>
-        </div>
-
-
-        <div class="counter_border">
-            <div class="counter_icon">
-                <i class="fa fa-user" aria-hidden="true"></i>
-            </div>
-            <div class="number_count">
-                <h3 class="counter_h3">202</h3>
-            </div>
-            <div class="work_count">
-                <p class="counter_p">No. of Clients</p>
-            </div>
-        </div>
-
-
-        <div class="counter_border">
-            <div class="counter_icon">
-                <i class="fa fa-heart-o" aria-hidden="true"></i>
-            </div>
-            <div class="number_count">
-                <h3 class="counter_h3">1689</h3>
-            </div>
-            <div class="work_count">
-                <p class="counter_p">Peoples Love</p>
-            </div>
-        </div>
-
-    </section>
-
-
-    <section class="section4-service">
-        <div class="row">
-            <div class="container">
-                <div class="section-p">
-                    <h1 class="p-service"><strong class="str-service">OUR TEAM</strong></h1>
-                    <hr class="hr-green">
-                    <p class="p-service">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, dignissimos! </p>
-                    <p class="p-service"> Lorem ipsum dolor sit amet, consectetur.</p>
-                </div>
-                <div class="all-box">
-
-
-                    <div class="box-12">
-                        <div class="box1_flex bg_grayish">
-                            <div class="box-heading2">
-                                <img src="1.png" class="img-box">
+                    <div class=blog-item-wrapper>
+                        <div class=blog-item-img>
+                            <a href=single-post.html>
+<img data-pagespeed-lazy-src="img/blog/ximg3.jpg.pagespeed.ic.jfso4IprMB.webp" alt="" src="/pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+</a>
+                        </div>
+                        <div class=blog-item-text>
+                            <div class=meta-tags>
+                                <span class=date><i class="lnr  lnr-clock"></i>2 Days Ago</span>
+                                <span class=comments><a href="#"><i class="lnr lnr-bubble"></i> 24 Comments</a></span>
                             </div>
-                            <div class="box-p">
-                                <h4 class="h4_box">Jhon Doe
-                                </h4>
-                                <p class="p_box p_new">Chief Technical Officer</p>
-                            </div>
-                            <div class="box_button">
-                                <button class="team_icon_2 fb"><i class="fa fa-facebook fbk" aria-hidden="true"></i></button>
-                                <button class="team_icon_2 twitter"><i class="fa fa-twitter twt" aria-hidden="true"></i></button>
-                                <button class="team_icon_2 google"><i class="fa fa-google-plus goog" aria-hidden="true"></i></button>
-                                <button class="team_icon_2 linkedin"><i class="fa fa-linkedin lnkd" aria-hidden="true"></i></button>
-                            </div>
+                            <h3>
+                                <a href=single-post.html>Social media at work</a>
+                            </h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+                            </p>
+                            <a href=single-post.html class=btn-rm>Read More <i class="lnr lnr-arrow-right"></i></a>
                         </div>
                     </div>
-
-
-
-                    <div class="box-12">
-                        <div class="box1_flex bg_grayish">
-                            <div class="box-heading2">
-                                <img src="2.png" class="img-box">
-                            </div>
-                            <div class="box-p">
-                                <h4 class="h4_box">Paul Kowalsy</h4>
-                                <p class="p_box p_new">CEO & Co-Founder</p>
-                            </div>
-                            <div class="box_button">
-                                <button class="team_icon_2 fb"><i class="fa fa-facebook fbk" aria-hidden="true"></i></button>
-                                <button class="team_icon_2 twitter"><i class="fa fa-twitter twt" aria-hidden="true"></i></button>
-                                <button class="team_icon_2 google"><i class="fa fa-google-plus goog" aria-hidden="true"></i></button>
-                                <button class="team_icon_2 linkedin"><i class="fa fa-linkedin lnkd" aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="box-12">
-                        <div class="box1_flex bg_grayish">
-                            <div class="box-heading2">
-                                <img src="3.png" class="img-box">
-                            </div>
-                            <div class="box-p">
-                                <h4 class="h4_box">Emilly Williams</h4>
-                                <p class="p_box p_new">Business Manager
-                                </p>
-                            </div>
-                            <div class="box_button">
-                                <button class="team_icon_2 fb"><i class="fa fa-facebook fbk" aria-hidden="true"></i></button>
-                                <button class="team_icon_2 twitter"><i class="fa fa-twitter twt" aria-hidden="true"></i></button>
-                                <button class="team_icon_2 google"><i class="fa fa-google-plus goog" aria-hidden="true"></i></button>
-                                <button class="team_icon_2 linkedin"><i class="fa fa-linkedin lnkd" aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="box-12">
-                        <div class="box1_flex bg_grayish">
-                            <div class="box-heading2">
-                                <img src="4.png" class="img-box">
-                            </div>
-                            <div class="box-p">
-                                <h4 class="h4_box">Patricia Green</h4>
-                                <p class="p_box p_new">Graphic Designer</p>
-                            </div>
-                            <div class="box_button">
-                                <button class="team_icon_2 fb"><i class="fa fa-facebook fbk" aria-hidden="true"></i></button>
-                                <button class="team_icon_2 twitter"><i class="fa fa-twitter twt" aria-hidden="true"></i></button>
-                                <button class="team_icon_2 google"><i class="fa fa-google-plus goog" aria-hidden="true"></i></button>
-                                <button class="team_icon_2 linkedin"><i class="fa fa-linkedin lnkd" aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
 
                 </div>
             </div>
@@ -522,171 +791,174 @@
     </section>
 
 
-
-    <section class="section4-service">
-        <div class="row">
-            <div class="container">
-                <div class="section-p">
-                    <h1 class="p-service"><strong class="str-service">RECENT BLOG
-                    </strong></h1>
-                    <hr class="hr-green">
-                    <p class="p-service">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, dignissimos! </p>
-                    <p class="p-service"> Lorem ipsum dolor sit amet, consectetur.</p>
-                </div>
-                <div class="all-box">
-
-
-                    <div class="box-13">
-                        <div class="box1_flex2">
-                            <div class="box-heading2">
-                                <img src="post1.png" class="img-box23">
-                                <div class="comment-div-flex">
-                                    <p class="time_p"><i class="fa fa-clock-o" aria-hidden="true"></i> 2 Days Ago</p>
-                                    <button class="time-btn-target"><i class="fa fa-comment-o" aria-hidden="true"></i> 24 Comments</button>
+    <section id=contact class=section data-stellar-background-ratio=-0.2>
+        <div class=contact-form>
+            <div class=container>
+                <div class=row>
+                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                        <div class=contact-us>
+                            <h3>Contact With us</h3>
+                            <div class=contact-address>
+                                <p>Centerville Road, DE 19808, US </p>
+                                <p class=phone>Phone: <span>(+94 123 456 789)</span></p>
+                                <p class=email>E-mail: <span>(<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2d4e4243594c4e596d404c5948034e4240">[email&#160;protected]</a>)</span></p>
+                            </div>
+                            <div class=social-icons>
+                                <ul>
+                                    <li class=facebook><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li class=twitter><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li class=google-plus><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li class=linkedin><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li class=dribbble><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                        <div class=contact-block>
+                            <form id=contactForm>
+                                <div class=row>
+                                    <div class=col-md-12>
+                                        <div class=form-group>
+                                            <input type=text class=form-control id=name name=name placeholder="Your Name" required data-error="Please enter your name">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class=col-md-12>
+                                        <div class=form-group>
+                                            <input type=text placeholder="Your Email" id=email class=form-control name=name required data-error="Please enter your email">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class=col-md-12>
+                                        <div class=form-group>
+                                            <textarea class=form-control id=message placeholder="Your Message" rows=8 data-error="Write your message" required></textarea>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="submit-button text-center">
+                                            <button class="btn btn-common" id=submit type=submit>Send Message</button>
+                                            <div id=msgSubmit class="h3 text-center hidden"></div>
+                                            <div class=clearfix></div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="box-p">
-                                <h4 class="h4_box">How often should you tweet?
-                                </h4>
-                                <p class="p_box p_new1">Lorem ipsum dolor sit amet, consectetur</p>
-                                <p class="p_box p_new1">adipisicing elit, sed do eiusmod tempor incididunt</p>
-                                <p class="p_box p_new1">ut labore et dolore magna aliqua...</p>
-                            </div>
-                            <div class="box_button">
-                                <button class="team_icon_3"> Read More<i class="fa fa-arrow-right" aria-hidden="true"></i>
-                            </div>
-                        </div>             
-                        </div>
-
-                
-
-                <div class="box-13">
-                    <div class="box1_flex2">
-                    <div class="box-heading2">
-                     <img src="post11.png" class="img-box23">
-                     <div class="comment-div-flex">
-                     <p class="time_p"><i class="fa fa-clock-o" aria-hidden="true"></i>
-                        2 Days Ago</p>
-                     <button class="time-btn-target"><i class="fa fa-comment-o" aria-hidden="true"></i> 24 Comments</button>
-                            </div>
-
-                        </div>
-                        <div class="box-p">
-                            <h4 class="h4_box">Content is still king</h4>
-                            <p class="p_box p_new1">Lorem ipsum dolor sit amet, consectetur</p>
-                            <p class="p_box p_new1">adipisicing elit, sed do eiusmod tempor incididunt</p>
-                            <p class="p_box p_new1">ut labore et dolore magna aliqua...</p>
-                        </div>
-                        <div class="box_button">
-                            <button class="team_icon_3"> Read More<i class="fa fa-arrow-right" aria-hidden="true"></i>
-                    </div>
-                </div>             
-                </div>
-
-
-
-                
-                <div class="box-13">
-                    <div class="box1_flex2">
-                    <div class="box-heading2">
-                     <img src="post111.png" class="img-box23">
-                     <div class="comment-div-flex">
-                        <p class="time_p"><i class="fa fa-clock-o" aria-hidden="true"></i>
-                            2 Days Ago</p>
-                        <button class="time-btn-target"><i class="fa fa-comment-o" aria-hidden="true"></i> 24 Comments</button>
+                            </form>
                         </div>
                     </div>
-                    <div class="box-p">
-                        <h4 class="h4_box">Social media at work</h4>
-                        <p class="p_box p_new1">Lorem ipsum dolor sit amet, consectetur</p>
-                        <p class="p_box p_new1">adipisicing elit, sed do eiusmod tempor incididunt</p>
-                        <p class="p_box p_new1">ut labore et dolore magna aliqua...</p>
-                    </div>
-                    <div class="box_button">
-                        <button class="team_icon_3"> Read More<i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </button>
-                    </div>
                 </div>
-            </div>
-
-
-        </div>
-        </div>
-        </div>
-    </section>
-
-
-    <section class="contactus_section">
-        <div class="contactus-div1">
-            <div class="contactus-div2">
-                <div class="contactus-details">
-                    <h1 class="contactus-heading">Contact With us</h1>
-                </div>
-                <div class="contactus-p">
-                    <p class="contactus-p1">Centerville Road, DE 19808, US</p>
-                    <p class="contactus-p1">Phone:<span class="contactus-p1 contactus-green">(+94 123 456 789)</span></p>
-                    <p class="contactus-p1">E-mail:<span class="contactus-p1 contactus-green">(contact@mate.com)</span></p>
-                </div>
-                <div class="contactus-div-button">
-                    <button class="team_icon_2 fb"><i class="fa fa-facebook fbk" aria-hidden="true"></i></button>
-                    <button class="team_icon_2 twitter"><i class="fa fa-twitter twt" aria-hidden="true"></i></button>
-                    <button class="team_icon_2 google"><i class="fa fa-google-plus goog" aria-hidden="true"></i></button>
-                    <button class="team_icon_2 linkedin"><i class="fa fa-linkedin lnkd" aria-hidden="true"></i></button>
-                    <button class="team_icon_2 dribbble"><i class="fa fa-dribbble drble" aria-hidden="true"></i></button>
-
-
-                </div>
-            </div>
-
-
-            <div class="contactus-div2 align-sequence">
-                <div class="div-form">
-                    <form>
-                        <input type="text" class='input-series' placeholder="Your Name" required="Enter your name" />
-                        <input type="email" class='input-series' placeholder="Your Email" required="Enter your email" />
-                        <textarea placeholder="Your Message" class='input-series' required="Write your message">
-
-                        </textarea>
-                    </form>
-                </div>
-                <diV class="contactus-form-btn">
-                    <button class="button_green">
-                                BUY NOW
-                            </button>
-                </diV>
-
             </div>
         </div>
     </section>
 
 
+    <footer>
+        <div class=container>
+            <div class=row>
 
-    <footer class="footer_div">
-        <div class="div-flex">
-            <div class="footer_div1">
-                <ul class="ul-footer">
-                    <li class="li_footer">Homepage</li>
-                    <li class="li_footer">Services</li>
-                    <li class="li_footer">About Us</li>
-                    <li class="li_footer">Contact</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="div-flex">
-            <div class="footer-content">
-                <div class="footer-centent1">
-                    <p class="footer-p">
-                        All copyrights reserved © 2018 - Designed & Developed by UIdeck
-                    </p>
+                <div class="col-lg-6 col-sm-6 col-xs-12">
+                    <ul class=footer-links>
+                        <li>
+                            <a href="#">Homepage</a>
+                        </li>
+                        <li>
+                            <a href="#">Services</a>
+                        </li>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-sm-6 col-xs-12">
+                    <div class=copyright>
+                        <p>All copyrights reserved &copy; 2018 - Designed & Developed by <a rel=nofollow href="https://uideck.com">UIdeck</a></p>
+                    </div>
                 </div>
             </div>
-
         </div>
     </footer>
 
-    <script type="text/javascript" src="script.js"></script>
 
+    <a href="#" class=back-to-top>
+<i class="lnr lnr-arrow-up"></i>
+</a>
+    <div id=loader>
+        <div class=spinner>
+            <div class=double-bounce1></div>
+            <div class=double-bounce2></div>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script type="text/javascript" data-pagespeed-no-defer>
+        pagespeed.lazyLoadImages.overrideAttributeFunctions();
+    </script>
+    <script src="js/jquery-min.js.pagespeed.jm.BnirE05kB4.js"></script>
+    <script src="js/popper.min.js+bootstrap.min.js.pagespeed.jc.JD5W49CSAR.js"></script>
+    <script>
+        eval(mod_pagespeed_6dYh5APAcZ);
+    </script>
+    <script>
+        eval(mod_pagespeed_iWH4rnCkyj);
+    </script>
+    <script src="js/jquery.mixitup.js+nivo-lightbox.js.pagespeed.jc.INoU1OL-MO.js"></script>
+    <script>
+        eval(mod_pagespeed_6xOzdavV__);
+    </script>
+    <script>
+        eval(mod_pagespeed_NIIkkySGCC);
+    </script>
+    <script src="js/owl.carousel.js+jquery.stellar.min.js+jquery.nav.js+scrolling-nav.js+jquery.easing.min.js+smoothscroll.js.pagespeed.jc.pZfA2EzmES.js"></script>
+    <script>
+        eval(mod_pagespeed_5lB3fSJtDo);
+    </script>
+    <script>
+        eval(mod_pagespeed_13fL63Q1Pa);
+    </script>
+    <script>
+        eval(mod_pagespeed_M4KYTGPEwG);
+    </script>
+    <script>
+        eval(mod_pagespeed_rWgfeedM$W);
+    </script>
+    <script>
+        eval(mod_pagespeed_8tJ3Gy0qvd);
+    </script>
+    <script>
+        eval(mod_pagespeed_nbhLD41Bn5);
+    </script>
+    <script src="js/jquery.slicknav.js+wow.js+jquery.vide.js+jquery.counterup.min.js+jquery.magnific-popup.min.js+waypoints.min.js+form-validator.min.js+contact-form-script.js+main.js.pagespeed.jc.I4jX8Lks7x.js"></script>
+    <script>
+        eval(mod_pagespeed_ZtWo36XFs6);
+    </script>
+    <script>
+        eval(mod_pagespeed_Cg0hpoiLQ7);
+    </script>
+    <script>
+        eval(mod_pagespeed_vOz4JslgJo);
+    </script>
+    <script>
+        eval(mod_pagespeed_2OZGSfwonb);
+    </script>
+    <script>
+        eval(mod_pagespeed_F$IKTqwj7R);
+    </script>
+    <script>
+        eval(mod_pagespeed_RUyZJUZ2x5);
+    </script>
+    <script>
+        eval(mod_pagespeed_aXrM99fpOt);
+    </script>
+    <script>
+        eval(mod_pagespeed_QqNGV273R$);
+    </script>
+    <script>
+        eval(mod_pagespeed_G9etGiZtMd);
+    </script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vb26e4fa9e5134444860be286fd8771851679335129114" integrity="sha512-M3hN/6cva/SjwrOtyXeUa5IuCT0sedyfT+jK/OV+s+D0RnzrTfwjwJHhd+wYfMm9HJSrZ1IKksOdddLuN6KOzw==" data-cf-beacon='{"rayId":"7ad0cfb25dd14933","version":"2023.3.0","r":1,"token":"9a6015d415bb4773a0bff22543062d3b","si":100}'
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
